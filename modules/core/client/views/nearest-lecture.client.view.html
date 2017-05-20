@@ -1,0 +1,14 @@
+<div style="margin:20px 0 10px 0;">
+  <span style="font-size: 1.3rem">Do najbliższego wykładu pozostało</span>
+  <span ng-show="switchTick"><i class="material-icons ticker md-18">radio_button_checked</i></span>
+  <span ng-show="!switchTick"><i class="material-icons ticker md-18">radio_button_unchecked</i></span>
+</div>
+<div id="countdown-timer">
+  <ul id="navlist">
+    <li ng-if="yearDiff !== 0"><span class="timer">{{yearDiff}} Y</span></li>
+    <li ng-if="monthDiff !== 0"><span class="timer"> {{monthDiff}} M</span></li>
+    <li ng-if="dayDiff !== 0"><span class="timer"> {{dayDiff}} D</span></li>
+    <li ng-if="hourDiff !== 0"><span class="timer"> {{hourDiff}} H</span></li>
+    <li ng-if="minuteDiff !== 0"><span class="timer"> {{minuteDiff}} MIN</span></li>
+  </ul>
+</div>

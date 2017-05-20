@@ -1,0 +1,50 @@
+<div id="carousel-example-generic2" class="carousel slide" style="height: 60vh;">
+  <!-- Wskaźniki w postaci kropek -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic2" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic2" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic2" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Slajdy -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <div class="jumbotron no-bg no-padds text-center">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+            <div lecture-list-directive title="{{vm.articles[0].title}}" date="{{vm.articles[0].date}}" description="{{vm.articles[0].content}}" lecturer="{{vm.articles[0].lecturer}}" aboutLecturer="{{vm.articles[0].aboutLecturer}}"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="jumbotron no-bg no-padds text-center">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-12">
+            <div lecture-list-directive title="{{vm.articles[1].title}}" date="{{vm.articles[1].date}}" description="{{vm.articles[1].content}}" lecturer="{{vm.articles[1].lecturer}}" aboutLecturer="{{vm.articles[1].aboutLecturer}}"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="jumbotron no-bg no-padds text-center">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12">
+            <div lecture-list-directive title="{{vm.articles[2].title}}" date="{{vm.articles[2].date}}" description="{{vm.articles[2].content}}" lecturer="{{vm.articles[2].lecturer}}" aboutLecturer="{{vm.articles[2].aboutLecturer}}"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Strzałki do przewijania -->
+  <a class="carousel-left-border left carousel-control" href="#carousel-example-generic2" data-slide="prev">
+    <span class="icon-prev"></span>
+  </a>
+  <a class="carousel-right-border right carousel-control" href="#carousel-example-generic2" data-slide="next">
+    <span class="icon-next"></span>
+  </a>
+</div>

@@ -1,0 +1,287 @@
+.content {
+	color: #6898b7;
+	margin-top: 50px;
+}
+
+.undecorated-link:hover {
+	text-decoration: none;
+}
+
+[ng\:cloak],
+[ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+	display: none !important;
+}
+
+.header-profile-image {
+	border-radius: 50%;
+	height: 28px;
+	margin-right: 5px;
+	opacity: 0.8;
+	width: 28px;
+}
+
+.open .header-profile-image,
+a:hover .header-profile-image {
+	opacity: 1;
+}
+
+.user-header-dropdown-toggle {
+	padding-bottom: 11px !important;
+	padding-top: 11px !important;
+}
+
+.get-time-adjust {
+	margin-top: 26px;
+}
+
+.time-height {
+	height: 32px;
+}
+
+.user-primary-account {
+	font-size: 30px;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+
+.carousel-indicators {
+	bottom: 10px;
+	left: 50%;
+	list-style: none;
+	margin-left: -30%;
+	padding-left: 0;
+	position: absolute;
+	text-align: center;
+	width: 60%;
+	z-index: 15;
+}
+
+.carousel-indicators li {
+	background-color: #000 \9;
+	background-color: rgba(0, 0, 0, 0);
+	border: 1px solid #000;
+	border-radius: 10px;
+	cursor: pointer;
+	direction: rtl;
+	display: inline-block;
+	height: 10px;
+	margin: 1px;
+	text-indent: 999px;
+	width: 50px;
+}
+
+.carousel-indicators .active {
+	background-color: #000;
+	height: 12px;
+	margin: 0;
+	width: 50px;
+}
+
+.container {
+	width: 100%;
+}
+
+.error-text {
+	display: none;
+}
+
+.has-error .help-block.error-text {
+	display: block;
+}
+
+.has-error .help-inline.error-text {
+	display: inline;
+}
+
+body {
+	background-image: url('../img/bg.jpg');
+}
+
+.banner {
+	background: url('../img/banner.jpg');
+	/*background-image: url('../img/banner.jpg');*/
+	opacity: 0.3;
+	background-repeat: no-repeat;
+	min-height: 203px;
+	width: 100%;
+	background-size: cover;;
+}
+
+.no-bg {
+	background-color: transparent;
+}
+
+input {
+	background-color: #184d70;
+	color: #6898B7;
+}
+
+textarea {
+	background-color: #5e5e5e;
+	color: #ffffff;
+}
+
+.tb-carousel-text-positioning {
+	margin: 0 15% 0 15%;
+}
+
+.carousel-control {
+	width: 10%;
+}
+
+.no-padds {
+	padding: 40px 0 40px 0;
+}
+
+.min-input-height {
+	height: 40px;
+}
+
+.bound-round {
+	border-radius: 4px !important;
+}
+
+.zero-padds {
+	padding: 0;
+}
+
+.carousel-right-border {
+	border-radius: 0 50px 50px 0;
+}
+
+.carousel-left-border {
+	border-radius: 50px 0 0 50px;
+}
+
+.update-adjust {
+	background-color: #184D70;
+	margin-left: 15px;
+	margin-top: 20px;
+}
+
+.control-label {
+	font-size: 1.5rem;
+}
+
+.datetime-label-adjust {
+	margin-top: 20px;
+}
+
+textarea {
+	resize: none;
+}
+
+.material-icons {
+	font-size: 1.5rem;
+	padding: 15px 0;
+}
+
+.ticker {
+	padding: 0;
+}
+
+.datetime-form {
+	min-height: 1px;
+	padding-left: 15px;
+	padding-right: 15px;
+	position: relative;
+}
+
+a.list-group-item {
+	background-color: #000;
+	background-color: rgba(255, 255, 255, 0.2);
+	color: #a1bccd;
+}
+
+a.list-group-item .list-group-item-heading {
+	color: #a1bccd;
+}
+
+a.list-group-item:hover {
+	background-color: #000;
+	background-color: rgba(255, 255, 255, 0.3);
+	color: #a1bccd;
+}
+
+.button-beautify {
+	background-color: #9cc0d8 !important;
+	color: #9cc0d8 !important;
+}
+
+.form-control {
+	background-color: #000;
+	background-color: rgba(255, 255, 255, 0.3);
+	color: #a1bccd;
+}
+
+.datetime-form {
+	float: left;
+	width: 33%;
+}
+
+.tb-carousel .lecture .title {
+	font-size: 2.6rem;
+	font-weight: bold;
+}
+
+.tb-carousel .lecture .lecturer {
+	font-size: 2rem;
+}
+
+.tb-carousel .lecture .description {
+	font-size: 1.8rem;
+}
+
+.tb-carousel .lecture .date {
+	font-size: 2.2rem;
+}
+
+@media (min-width: 768px) {
+	.datetime-form {
+		float: left;
+		width: 33%;
+	}
+}
+
+@media (min-width: 992px) {
+	.datetime-form {
+		float: left;
+		width: 33%;
+	}
+
+	.get-time-adjust {
+		margin-top: 28px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.datetime-form {
+		float: left;
+		width: 20%;
+	}
+}
+
+.nearest-lecture {
+	text-align: center;
+	font-size: 2rem;
+}
+
+.timer {
+	font-size: 2.4rem;
+}
+
+#navlist li {
+	list-style-type: none;
+	font-weight: bold;
+	border: 2px solid;
+	border-radius: 5px;
+	width: 100%;
+}
+
+ul {
+	padding-left: 0;
+}

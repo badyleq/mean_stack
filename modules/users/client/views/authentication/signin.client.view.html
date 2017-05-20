@@ -1,0 +1,35 @@
+<div>
+  <h3 class="col-xs-12 text-center">Lub własnym kontem</h3>
+  <div class="col-xs-offset-2 col-xs-8 col-md-offset-4 col-md-4">
+    <form name="vm.userForm" ng-submit="vm.signin(vm.userForm.$valid)" class="signin" novalidate autocomplete="off">
+      <fieldset>
+        <div class="form-group" show-errors>
+          <uib-alert type="danger" ng-show="vm.error" class="text-center text-danger">
+            <span ng-bind="vm.error"></span>
+          </uib-alert>
+          <label for="usernameOrEmail">Nick lub Email</label>
+          <input type="text" id="usernameOrEmail" name="usernameOrEmail" class="form-control" ng-model="vm.credentials.usernameOrEmail" placeholder="Nazwa użytkownika or Email" required autofocus>
+          <div ng-messages="vm.userForm.usernameOrEmail.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Nick lub Email jest wymagany</p>
+          </div>
+        </div>
+        <div class="form-group" show-errors>
+          <label for="password">Hasło</label>
+          <input type="password" id="password" name="password" class="form-control" ng-model="vm.credentials.password" placeholder="Hasło" required>
+          <div ng-messages="vm.userForm.password.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Hasło jest wymagane</p>
+          </div>
+        </div>
+        <div class="text-center form-group">
+          <button type="submit" class="btn btn-primary">Zaloguj się</button>
+          &nbsp; or&nbsp;
+          <a ui-sref="authentication.signup">Zarejestruj się</a>
+        </div>
+        <div class="text-center forgot-password">
+          <a ui-sref="password.forgot">Zapomniałeś hasła?</a>
+        </div>
+        <br />
+      </fieldset>
+    </form>
+  </div>
+</div>

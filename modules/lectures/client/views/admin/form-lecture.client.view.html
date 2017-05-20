@@ -1,0 +1,81 @@
+<section>
+  <div class="pull-right">
+    <a ng-show="vm.article._id" class="btn btn-primary" ng-click="vm.remove()">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div>
+  <div class="page-header">
+    <h1>{{vm.article._id ? 'Edit Article' : 'New Article'}}</h1>
+  </div>
+  <div class="col-md-12">
+    <form name="vm.form.articleForm" class="form-horizontal" novalidate>
+      <fieldset>
+        <div class="form-group" show-errors>
+          <div class="col-md-6 col-sm-12 col-xs-12">
+            <span ng-click="vm.startDictation('title')"> <label class="control-label" for="title">Title</label>
+            <i class="material-icons md-18">keyboard_voice</i></span>
+            <input name="title" type="text" ng-model="vm.article.title" id="title"
+                   class="form-control min-input-height"
+                   placeholder="Title" required autofocus>
+            <div ng-messages="vm.form.articleForm.title.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Article title is required.</p>
+            </div>
+            <div>
+              <span ng-click="vm.startDictation('content')"><label class="control-label" for="content">Content </label>
+              <i class="material-icons md-18">keyboard_voice</i></span>
+              <textarea name="content" ng-model="vm.article.content" id="content" class="form-control" cols="30"
+                        rows="6" placeholder="Content"></textarea>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-sm-12 col-xs-12">
+
+            <div>
+              <span ng-click="vm.startDictation('lecturer')"><label class="control-label"
+                                                                    for="lecturer">Lecturer</label>
+              <i class="material-icons md-18">keyboard_voice</i></span>
+              <input name="lecturer" type="text" ng-model="vm.article.lecturer" id="lecturer"
+                     class="form-control min-input-height"
+                     placeholder="Lecturer first and last name" autofocus>
+            </div>
+            <div>
+              <span ng-click="vm.startDictation('aboutLecturer')"><label class="control-label" for="aboutLecturer">About lecturer</label>
+              <i class="material-icons md-18">keyboard_voice</i></span>
+              <textarea name="content" data-ng-model="vm.article.aboutLecturer" id="aboutLecturer" class="form-control"
+                        cols="30"
+                        rows="6" placeholder="About lecturer"></textarea>
+            </div>
+          </div>
+          <div>
+            <div id="data">
+              <div ng-repeat="element in vm.dateElements" class="datetime-form">
+                <label class="control-label" for={{element.type}}>{{element.view}}</label>
+                <select required class="form-control" id="{{element.type}}" size="1" ng-model="vm.article[element.type]"
+                        ng-options="article for article in vm.article.{{element.type}}s track by article">
+                </select>
+              </div>
+
+              <div class="datetime-form get-time-adjust">
+                <button type="button" ng-click="vm.setNow()"
+                        class="btn btn-default time-height">Today
+                </button>
+                <button type="button" ng-click="vm.addDay()"
+                        class="btn btn-default time-height">+1 Day
+                </button>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <label class="control-label datetime-label-adjust" for="data">Termin
+                <span ng-if="vm.article.minute">
+              : {{vm.article.day}}-{{vm.article.month}}-{{vm.article.year}}  {{vm.article.hour}}:{{vm.article.minute}}
+            </span></label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <button type="button" ng-click="vm.save(vm.form.articleForm.$valid)" class="btn btn-default update-adjust">
+    {{vm.article._id ? 'Update' : 'Create'}}
+  </button>
+</section>
