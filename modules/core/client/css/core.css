@@ -103,12 +103,11 @@ body {
 
 .banner {
 	background: url('../img/banner.jpg');
-	/*background-image: url('../img/banner.jpg');*/
-	opacity: 0.3;
 	background-repeat: no-repeat;
-	min-height: 203px;
-	width: 100%;
 	background-size: cover;;
+	min-height: 203px;
+	opacity: 0.3;
+	width: 100%;
 }
 
 .no-bg {
@@ -266,8 +265,8 @@ a.list-group-item:hover {
 }
 
 .nearest-lecture {
-	text-align: center;
 	font-size: 2rem;
+	text-align: center;
 }
 
 .timer {
@@ -275,10 +274,10 @@ a.list-group-item:hover {
 }
 
 #navlist li {
-	list-style-type: none;
-	font-weight: bold;
 	border: 2px solid;
 	border-radius: 5px;
+	font-weight: bold;
+	list-style-type: none;
 	width: 100%;
 }
 
