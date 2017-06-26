@@ -1,0 +1,14 @@
+<div class="page-header">
+  <h1>Lista Quizów</h1>
+</div>
+
+<div class="list-group">
+  <a ng-repeat="quiz in vm.quizzesList" class="list-group-item" ng-click="vm.selectQuiz($index)" href="/quizzes/select">
+    <h4 class="list-group-item-heading" ng-bind="quiz.quizName"></h4>
+    Liczba pytań: <span class="list-group-item-text" ng-bind="quiz.questionList.length"></span>
+    <p>
+      Czas quizu: <span class="list-group-item-text" ng-bind="quiz.quizTime"></span>
+    </p>
+
+  </a>
+</div>

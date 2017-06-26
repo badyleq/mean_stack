@@ -101,15 +101,6 @@ body {
 	background-image: url('../img/bg.jpg');
 }
 
-.banner {
-	background: url('../img/banner.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;;
-	min-height: 203px;
-	opacity: 0.3;
-	width: 100%;
-}
-
 .no-bg {
 	background-color: transparent;
 }
@@ -223,26 +214,48 @@ a.list-group-item:hover {
 }
 
 .tb-carousel .lecture .title {
-	font-size: 2.6rem;
+	font-size: 2.1rem;
 	font-weight: bold;
 }
 
 .tb-carousel .lecture .lecturer {
-	font-size: 2rem;
+	font-size: 1.5rem;
 }
 
 .tb-carousel .lecture .description {
-	font-size: 1.8rem;
+	font-size: 1.3rem;
 }
 
 .tb-carousel .lecture .date {
-	font-size: 2.2rem;
+	font-size: 1.8rem;
 }
 
 @media (min-width: 768px) {
 	.datetime-form {
 		float: left;
 		width: 33%;
+	}
+
+	.tb-carousel .lecture .title {
+		font-size: 2.6rem;
+		font-weight: bold;
+	}
+
+	.tb-carousel .lecture .lecturer {
+		font-size: 2rem;
+	}
+
+	.tb-carousel .lecture .description {
+		font-size: 1.8rem;
+	}
+
+	.tb-carousel .lecture .date {
+		font-size: 2.2rem;
+	}
+
+	.tb-carousel .lecture .title {
+		font-size: 2.6rem;
+		font-weight: bold;
 	}
 }
 
@@ -254,6 +267,12 @@ a.list-group-item:hover {
 
 	.get-time-adjust {
 		margin-top: 28px;
+	}
+
+	.nearest-lecture {
+		font-size: 2rem;
+		text-align: center;
+		float: right;
 	}
 }
 
@@ -267,6 +286,11 @@ a.list-group-item:hover {
 .nearest-lecture {
 	font-size: 2rem;
 	text-align: center;
+}
+
+.nearest-lecture li {
+	margin-bottom: 2px;
+	display: inline-block;
 }
 
 .timer {
@@ -283,4 +307,12 @@ a.list-group-item:hover {
 
 ul {
 	padding-left: 0;
+}
+
+
+.banner-img {
+	height: auto;
+	margin: 20px 0;
+	width: 100%;
+	opacity: 0.5;
 }

@@ -1,0 +1,16 @@
+selected quiz no. {{vm.selectedQuiz}}
+<br/>
+{{vm.selectedQuiz.quizName}}
+<br/>
+Ilość pytań: {{vm.selectedQuiz.questionList.length}}
+<br/>
+Czas trwania quizu: {{vm.selectedQuiz.quizTime}}
+<br/>
+
+<div ng-include="'/modules/quizzes/client/views/quiz-templates/yes-no-question.html'">
+
+</div>
+
+<button type="button" ng-click="vm.addDay()"
+        class="btn btn-default time-height">Następne pytanie
+</button>

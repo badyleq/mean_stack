@@ -10,6 +10,6 @@
   function ArticlesListController(ArticlesService) {
     var vm = this;
 
-    vm.lectures = ArticlesService.lectures;
+    vm.lectures = ArticlesService.query();
   }
 }());
