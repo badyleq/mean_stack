@@ -1,0 +1,44 @@
+<div style="margin-top: 50px;">
+  Tytuł <br/>
+  <textarea style="margin: 20px 0;" ng-model="vm.title" class="form-control"
+            cols="30"
+            rows="2"
+            placeholder="Tytuł"></textarea>
+</div>
+
+Treść pytania <br/>
+<textarea style="margin: 20px 0;" ng-model="vm.questionText" class="form-control"
+          cols="30"
+          rows="2"
+          placeholder="Treść pytania"></textarea>
+
+<button style="display:block;" type="button" ng-click="vm.addOption()"
+        class="btn btn-default time-height">+
+</button>
+
+<br/>Opcje: <br/>
+<div ng-repeat="option in vm.options track by $index">
+  <input style="width: 50px;" class="create-select" type="checkbox" ng-model="vm.optionsChecks[$index]"
+         value="{{option}}">
+  <input style="margin: 20px 0 0 0; width: 70%; display: inline;" type="text" ng-model="vm.options[$index]"
+         class="form-control min-input-height">
+  <button style="margin-left: 10px;" type="button" ng-click="vm.removeQuestion($index)"
+          class="btn btn-default time-height">-
+  </button>
+  <br/>
+</div>
+
+<div class="quizzes">
+  <div class="quiz-buttons">
+    <button style="display:block;" type="button" ng-click="vm.submitQuiz()"
+            class="btn btn-default time-height">Zapisz Quiz
+    </button>
+
+    <button style="display:block;" type="button" ng-click="vm.saveQuestion()"
+            class="btn btn-default time-height">Zapisz Pytanie
+    </button>
+  </div>
+</div>
+
+
+
