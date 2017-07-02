@@ -30,7 +30,8 @@
         controllerAs: 'vm',
         data: {
           pageTitle: 'Selected Quiz'
-        }
+        },
+        css: '../css/quizzes.css'
       });
   }
 }());

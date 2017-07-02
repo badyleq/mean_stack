@@ -1,1 +1,8 @@
-yesnoquestion
+{{vm.selectedQuiz.questionList[vm.actuallySelectedQuestion].questionText}}
+<form name="answerForm">
+  <div ng-repeat="answer in vm.selectedQuiz.questionList[vm.actuallySelectedQuestion].questionOptions">
+    <div class="radio" ng-init="$parent.answr=vm.answers[vm.actuallySelectedQuestion]">
+      <label><input type="radio" ng-model="$parent.answr" name="radios" value="{{answer}}" ng-change="vm.write($parent.answr)"><span class="list-label"> {{answer}}</span></label>
+    </div>
+  </div>
+</form>

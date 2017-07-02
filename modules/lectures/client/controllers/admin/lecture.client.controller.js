@@ -239,12 +239,12 @@
 
     // Remove existing Article
     function remove() {
-      if ($window.confirm('Are you sure you want to delete?')) {
+      if ($window.confirm('Czy jesteś pewny, że chcesz usunąć ten wykład?')) {
         vm.article.$remove(function () {
           $state.go('admin.articles.list');
           Notification.success(
             {
-              message: '<i class="glyphicon glyphicon-ok"></i> Article deleted successfully!'
+              message: '<i class="glyphicon glyphicon-ok"></i> Artykuł usunięty pomyślnie!'
             });
         });
       }

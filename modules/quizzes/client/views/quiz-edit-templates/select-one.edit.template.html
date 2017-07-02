@@ -1,0 +1,19 @@
+<div ng-show="vm.questionToEdit">
+  <br/>
+  Treść pytania
+  <textarea ng-model="vm.selectedQuiz.questionList[vm.questionToEdit].questionText" class="form-control" cols="30"
+            rows="2"></textarea>
+  <br/>
+  Możliwe odpowiedzi
+  <div ng-repeat="question in vm.selectedQuiz.questionList[vm.questionToEdit].questionOptions"
+       style="margin-bottom:3px;">
+  <textarea ng-model="vm.selectedQuiz.questionList[vm.questionToEdit].questionOptions[$index]" class="form-control"
+            cols="30"
+            rows="2"></textarea>
+  </div>
+  <br/>
+  Poprawna odpowiedź
+  <textarea ng-model="vm.selectedQuiz.questionList[vm.questionToEdit].questionAnswer" class="form-control"
+            cols="30"
+            rows="2"></textarea>
+</div>

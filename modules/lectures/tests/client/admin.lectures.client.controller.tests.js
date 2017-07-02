@@ -163,7 +163,7 @@
         $scope.vm.remove();
         $httpBackend.flush();
 
-        expect(Notification.success).toHaveBeenCalledWith({ message: '<i class="glyphicon glyphicon-ok"></i> Article deleted successfully!' });
+        expect(Notification.success).toHaveBeenCalledWith({ message: '<i class="glyphicon glyphicon-ok"></i> Artykuł usunięty pomyślnie!' });
         expect($state.go).toHaveBeenCalledWith('admin.articles.list');
       });
 

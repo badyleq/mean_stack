@@ -1,0 +1,36 @@
+<div class="page-header">
+  <h1>Lista Quizów
+    <a class="btn btn-primary pull-right" data-ui-sref="admin.quizzes.create">
+      <i class="glyphicon glyphicon-plus"></i>
+    </a>
+  </h1>
+</div>
+
+<div class="list-group">
+  <div ng-repeat="quiz in vm.quizzesList">
+    <div class="col-md-11 col-sm-11 col-xs-11" style="padding-right: 5px; margin-bottom: 5px;">
+      <a class="list-group-item">
+        <h4 class="list-group-item-heading" ng-bind="quiz.quizName"></h4>
+        Liczba pytań: <span class="list-group-item-text" ng-bind="quiz.questionList.length"></span>
+        <p>
+          Czas quizu: <span class="list-group-item-text" ng-bind="quiz.quizTime"></span> min
+        </p>
+      </a>
+    </div>
+    <div class="col-md-1 col-sm-1 col-xs-1" style="padding-left: 0; margin-top: 5px; padding-right: 0;">
+      <a class="btn btn-primary pull-right" style="margin-bottom: 14px;" ng-click="vm.editQuiz($index)" href="/admin/quizzes/edit">
+        <i class="glyphicon glyphicon-edit"></i>
+      </a>
+      <a class="btn btn-primary pull-right" ng-click="vm.removeQuiz($index)">
+        <i class="glyphicon glyphicon-trash"></i>
+      </a>
+    </div>
+  </div>
+
+  <div style="text-align: center; margin-top: 90px;" ng-show="vm.quizzesList.length === 0">
+    <span style="font-size: 15rem; opacity: 0.6; display: block;">
+      <i class="glyphicon glyphicon-ban-circle"></i>
+    </span>
+    <span style="opacity: 0.6; font-size: 4rem; font-weight: bold;">Brak quizów do wyświetlenia</span>
+  </div>
+</div>

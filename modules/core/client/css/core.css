@@ -316,3 +316,18 @@ ul {
 	width: 100%;
 	opacity: 0.5;
 }
+
+.timeout-label {
+	font-size: 2rem;
+	font-weight:normal;
+	display: block;
+}
+
+select {
+	margin: 0 auto;
+	height: 32px;
+	width: 42px;
+	border-radius: 4px;
+	font-size: 2.2rem;
+	font-weight: bold;
+}

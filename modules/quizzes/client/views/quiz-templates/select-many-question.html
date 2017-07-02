@@ -1,1 +1,6 @@
-selectmanyquestion
+<div class="select-many-title">{{vm.selectedQuiz.questionList[vm.actuallySelectedQuestion].questionText}}</div>
+<form ng-init="$parent.answers=vm.answers[vm.actuallySelectedQuestion]">
+  <div ng-repeat="answer in vm.selectedQuiz.questionList[vm.actuallySelectedQuestion].questionOptions">
+    <input type="checkbox" ng-model="$parent.answers[$index]" value="{{answer}}" ng-change="vm.write($parent.answers)"><span class="list-label"> {{answer}} </span>
+  </div>
+</form>

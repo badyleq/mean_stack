@@ -1,0 +1,21 @@
+<div style="text-align:center; margin-top: 30px;">
+  Wybierz pytanie do zmiany
+  <br/>
+
+  <label style="display:block;" for="questionSelect"> Numer pytania: </label>
+  <select name="questionSelect" id="questionSelect" ng-model="vm.questionToEdit" style="display: block;">
+    <option ng-repeat="option in vm.selectedQuiz.questionList" value="{{$index}}">{{$index+1}}</option>
+  </select>
+</div>
+
+<div class="quiz-content quiz-container"
+     ng-include="vm.editQuestionTemplates[vm.selectedQuiz.questionList[vm.questionToEdit].questionType]"></div>
+
+<div class="quizzes">
+  <div class="quizz-buttons" ng-show="vm.questionToEdit">
+    <button type="button" ng-click="vm.saveQuiz()"
+            class="btn btn-default time-height">Zapisz zmiany
+    </button>
+  </div>
+</div>
+

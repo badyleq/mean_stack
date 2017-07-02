@@ -6,6 +6,10 @@
             placeholder="Tytuł"></textarea>
 </div>
 
+Czas quizu:<br/>
+<input type="number" ng-model="vm.quizTime" min="5" max="30"
+       class="form-control min-input-height" style="margin: 20px 0;">
+
 Treść pytania <br/>
 <textarea style="margin: 20px 0;" ng-model="vm.questionText" class="form-control"
           cols="30"
@@ -29,16 +33,13 @@ Treść pytania <br/>
 </div>
 
 <div class="quizzes">
-  <div class="quiz-buttons">
-    <button style="display:block;" type="button" ng-click="vm.submitQuiz()"
+  <div class="quizz-buttons">
+    <button type="button" ng-click="vm.submitQuiz()"
             class="btn btn-default time-height">Zapisz Quiz
     </button>
 
-    <button style="display:block;" type="button" ng-click="vm.saveQuestion()"
+    <button type="button" ng-click="vm.saveQuestion()"
             class="btn btn-default time-height">Zapisz Pytanie
     </button>
   </div>
 </div>
-
-
-
